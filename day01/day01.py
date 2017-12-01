@@ -1,5 +1,5 @@
 #!/usr/bin/python
-def main(incrementor):
+def inverse_captcha(incrementor):
     data = open('input.txt').read().strip()
     total = 0
     for i in range(len(data)):
@@ -10,5 +10,5 @@ def main(incrementor):
     print(total)
 
 
-main(lambda x, y: x + 1)
-main(lambda x, y: x + y / 2)
+inverse_captcha(lambda x, y: x + 1)
+inverse_captcha(lambda x, y: x + y / 2)
