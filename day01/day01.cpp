@@ -11,7 +11,6 @@ int inverse_captcha(string input, int shift) {
   transform(input.begin(), input.end(), data.begin(),
             [](char x) { return x - '0'; });
   
-  int N = input.length();
   vector<int> shifted (data);
   rotate(shifted.begin(), shifted.end() - shift, shifted.end());
 
