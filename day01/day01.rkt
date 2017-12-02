@@ -1,9 +1,9 @@
 #lang racket
 
-(define (inverse-captcha data increment)
+(define (inverse-captcha data shift)
   (println (for/sum ([c1 (in-string data)]
-                     [c2 (in-string (string-append (substring data increment)
-                                                   (substring data 0 increment)))]
+                     [c2 (in-string (string-append (substring data shift)
+                                                   (substring data 0 shift)))]
                      #:when (char=? c1 c2))
              (string->number (string c1)))))
 

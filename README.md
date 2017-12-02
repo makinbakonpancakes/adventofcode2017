@@ -25,3 +25,8 @@ g++ dayXX.cpp
 
 ## Javascript
 Just open the `.html` file in a browser
+
+## Clojure
+```shell
+clojure dayXX.clj
+```
