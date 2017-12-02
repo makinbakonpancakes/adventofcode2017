@@ -5,7 +5,7 @@ import java.util.stream.*;
 public class Day01 {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String input = new Scanner(new File("./input.txt")).useDelimiter("\\Z").next();
+        String input = new Scanner(new File("./input.txt")).next();
         System.out.println(inverseCaptcha(input, 1));
         System.out.println(inverseCaptcha(input, input.length() / 2));
     }
