@@ -1,14 +1,14 @@
 #!/usr/bin/python
-def inverse_captcha(incrementor):
+def inverse_captcha(n):
     data = open('input.txt').read().strip()
     total = 0
     for i in range(len(data)):
         num = int(data[i])
-        next_index = int(incrementor(i, len(data))) % len(data)
+        next_index = (i + n) % len(data)
         if num == int(data[next_index]):
             total += num
     print(total)
 
 
-inverse_captcha(lambda x, y: x + 1)
-inverse_captcha(lambda x, y: x + y / 2)
+inverse_captcha(1)
+inverse_captcha(len(data) // 2)
