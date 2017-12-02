@@ -22,3 +22,6 @@ racket dayXX.rkt
 g++ dayXX.cpp
 ./a.out
 ```
+
+## Javascript
+Just open the `.html` file in a browser
