@@ -30,3 +30,8 @@ Just open the `.html` file in a browser
 ```shell
 clojure dayXX.clj
 ```
+
+## Ruby
+```shell
+ruby dayXX.rb
+```
