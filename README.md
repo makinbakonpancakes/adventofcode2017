@@ -17,3 +17,8 @@ java -classpath . DayXX
 ```shell
 racket dayXX.rkt
 ```
+## C++
+```shell
+g++ dayXX.cpp
+./a.out
+```
