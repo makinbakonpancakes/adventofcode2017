@@ -21,7 +21,6 @@ def two(data):
     adjacents = list(itertools.product([0, 1, -1], repeat=2))
     adjacents.remove((0, 0))
     while True:
-        print(grid)
         i += enws[0][0]
         j += enws[0][1]
         if (i == j or (i < 0 and -i == j) or (i > 0 and -i+1 == j)):
