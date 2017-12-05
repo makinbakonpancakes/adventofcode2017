@@ -1,7 +1,7 @@
 from itertools import permutations
 
 
-data = [x.split() for x in open('input.txt').readlines()]
-print(len(data) - sum(1 for x in data if len(x) != len(set(x))))
-print(len(data) - sum([any([True for y in permutations(x, 2)
-                            if sorted(y[0]) == sorted(y[1])]) for x in data]))
+data = [line.split() for line in open('input.txt').readlines()]
+print(len(data) - sum(True for phrase in data if len(phrase) != len(set(phrase))))
+print(len(data) - sum([any([True for pair in permutations(phrase, 2)
+                            if sorted(pair[0]) == sorted(pair[1])]) for phrase in data]))
