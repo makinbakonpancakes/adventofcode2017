@@ -1,4 +1,6 @@
 from collections import namedtuple
+import sys
+
 
 Node = namedtuple('Node', ['weight', 'children'])
 data = [x.strip().split(' ') for x in open('input.txt').readlines()]
@@ -13,11 +15,8 @@ for tree in data:
 root = (tower.keys() - not_roots).pop()
 print(root)
 
-found = False
-
 
 def tower_weight(name):
-    global found  # Ughhhhh
     if len(tower[name].children) == 0:
         return tower[name].weight
     else:
@@ -27,9 +26,8 @@ def tower_weight(name):
                         if list(weights.values()).count(x[1]) == 1][0]
             good_node = [x for x in weights.items()
                          if list(weights.values()).count(x[1]) != 1][0]
-            if not found:
-                print(tower[bad_node[0]].weight - abs(good_node[1] - bad_node[1]))
-                found = True
+            print(tower[bad_node[0]].weight - abs(good_node[1] - bad_node[1]))
+            sys.exit(0)
         return sum([x[1] for x in weights.items()]) + tower[name].weight
 
 
