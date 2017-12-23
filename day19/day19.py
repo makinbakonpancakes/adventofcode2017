@@ -31,5 +31,3 @@ while road(location) != ' ':
         steps += 1
 print(path)
 print(steps)
-# 17219 too low
-# 17229 too high
